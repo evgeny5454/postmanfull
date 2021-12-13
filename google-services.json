@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "207416746678",
+    "firebase_url": "https://postman-7fcb4-default-rtdb.firebaseio.com",
+    "project_id": "postman-7fcb4",
+    "storage_bucket": "postman-7fcb4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:207416746678:android:8cf8cb3c5efda8c87a7c17",
+        "android_client_info": {
+          "package_name": "com.evgeny_m.postman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "207416746678-50rsfqjhcsi372aepj229mdvin76njct.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.evgeny_m.postman",
+            "certificate_hash": "e798da3032d1698a8a507d07e6efbdbafe70ba05"
+          }
+        },
+        {
+          "client_id": "207416746678-gha10f3cs6kfag6478qg94tjn586tsvj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAo1u_ALy5OjXlX6u4KfWL9TCBPJ7s1eF0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "207416746678-gha10f3cs6kfag6478qg94tjn586tsvj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

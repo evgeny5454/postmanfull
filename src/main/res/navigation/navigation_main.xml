@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/chatsFragment">
+
+    <fragment
+        android:id="@+id/chatsFragment"
+        android:name="com.evgeny_m.postman.presentation.userscreens.chats.ChatsFragment"
+        android:label="ChatsFragment"
+        tools:layout="@layout/fragment_chats" >
+        <action
+            android:id="@+id/action_chatsFragment_to_enterPhoneNumberFragment"
+            app:destination="@id/enterPhoneNumberFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.evgeny_m.postman.presentation.userscreens.settings.screens.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_changeUserNameFragment"
+            app:destination="@id/changeUserNameFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_changeUserFullNameFragment"
+            app:destination="@id/changeUserFullNameFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_changeBioFragment"
+            app:destination="@id/changeBioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changeUserNameFragment"
+        android:name="com.evgeny_m.postman.presentation.userscreens.settings.screens.ChangeUserNameFragment"
+        android:label="fragment_change_user_name"
+        tools:layout="@layout/fragment_change_user_name" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/changeUserFullNameFragment"
+        android:name="com.evgeny_m.postman.presentation.userscreens.settings.screens.ChangeUserFullNameFragment"
+        android:label="fragment_change_user_full_name"
+        tools:layout="@layout/fragment_change_user_full_name" />
+    <fragment
+        android:id="@+id/changeBioFragment"
+        android:name="com.evgeny_m.postman.presentation.userscreens.settings.screens.ChangeUserBioFragment"
+        android:label="fragment_change_bio"
+        tools:layout="@layout/fragment_change_bio" />
+    <fragment
+        android:id="@+id/photoFragment"
+        android:name="com.evgeny_m.postman.presentation.userscreens.settings.screens.PhotoFragment"
+        android:label="fragment_photo"
+        tools:layout="@layout/fragment_photo" />
+    <fragment
+        android:id="@+id/singleChatFragment"
+        android:name="com.evgeny_m.postman.presentation.userscreens.singlechat.SingleChatFragment"
+        android:label="fragment_single_chat"
+        tools:layout="@layout/fragment_single_chat" />
+    <fragment
+        android:id="@+id/enterPhoneNumberFragment"
+        android:name="com.evgeny_m.postman.presentation.userscreens.registrationFragment.EnterPhoneNumberFragment"
+        android:label="fragment_enter_phone_number"
+        tools:layout="@layout/fragment_enter_phone_number" />
+</navigation>
