@@ -16,6 +16,7 @@ import com.evgeny_m.data.chatsfirebase.result
 import com.evgeny_m.data.models.User
 import com.evgeny_m.data.registration.FirebaseRegistrationImpl
 import com.evgeny_m.data.registration.currentUserId
+import com.evgeny_m.data.viewmodels.AuthViewModel
 import com.evgeny_m.data.viewmodels.UserViewModel
 import com.evgeny_m.domain.usecase.RegistrationUseCase
 import com.evgeny_m.postman.R
@@ -30,6 +31,7 @@ class ChatsFragment : Fragment() {
     private lateinit var adapter: ChatAdapter
     private lateinit var userViewModel: UserViewModel
     private lateinit var registrationUseCase: RegistrationUseCase
+    private lateinit var viewModel: AuthViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,22 +39,30 @@ class ChatsFragment : Fragment() {
     ): View {
         binding = FragmentChatsBinding.inflate(layoutInflater)
 
-        registrationUseCase = RegistrationUseCase(
+        /*registrationUseCase = RegistrationUseCase(
             firebaseRegistration = FirebaseRegistrationImpl(requireActivity())
-        )
+        )*/
         //registrationUseCase.getUserId()
+        viewModel = ViewModelProvider(this)[AuthViewModel::class.java]
         userViewModel = ViewModelProvider(this)[UserViewModel::class.java]
         initNavButton(binding.toolbar)
         adapter = ChatAdapter(requireContext())
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = adapter
 
-        currentUserId.observe(viewLifecycleOwner, Observer {
+        viewModel.userId.observe(viewLifecycleOwner, Observer {
             if (it == "null") {
                 view?.findNavController()
                     ?.navigate(R.id.action_chatsFragment_to_enterPhoneNumberFragment)
             }
         })
+
+        /*currentUserId.observe(viewLifecycleOwner, Observer {
+            if (it == "null") {
+                view?.findNavController()
+                    ?.navigate(R.id.action_chatsFragment_to_enterPhoneNumberFragment)
+            }
+        })*/
         return binding.root
     }
 

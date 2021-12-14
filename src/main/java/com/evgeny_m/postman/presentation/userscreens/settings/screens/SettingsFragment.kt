@@ -90,7 +90,7 @@ class SettingsFragment : Fragment() {
                 }
                 R.id.settings_menu_log_out -> {
                     registrationUseCase = RegistrationUseCase(
-                        firebaseRegistration = FirebaseRegistrationImpl(requireActivity())
+                        firebaseRegistration = FirebaseRegistrationImpl(application = requireActivity().application)
                     )
                     registrationUseCase.logOut()
                     findNavController().popBackStack()

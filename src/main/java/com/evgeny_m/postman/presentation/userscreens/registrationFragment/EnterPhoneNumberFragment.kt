@@ -16,6 +16,7 @@ import com.evgeny_m.data.models.User
 import com.evgeny_m.data.registration.FirebaseRegistrationImpl
 import com.evgeny_m.data.registration.currentUserId
 import com.evgeny_m.data.registration.register
+import com.evgeny_m.data.viewmodels.AuthViewModel
 import com.evgeny_m.data.viewmodels.UserViewModel
 import com.evgeny_m.domain.usecase.RegistrationUseCase
 import com.evgeny_m.postman.databinding.FragmentEnterPhoneNumberBinding
@@ -27,7 +28,7 @@ class EnterPhoneNumberFragment : Fragment() {
 
     private lateinit var binding: FragmentEnterPhoneNumberBinding
 
-    //private lateinit var viewModel: FirebaseRegistrationViewModel
+    private lateinit var viewModel: AuthViewModel
     private lateinit var userViewModel: UserViewModel
     private lateinit var registrationUseCase: RegistrationUseCase
     private lateinit var stringPhone: String
@@ -40,7 +41,7 @@ class EnterPhoneNumberFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentEnterPhoneNumberBinding.inflate(layoutInflater)
-        //viewModel = ViewModelProvider(requireActivity())[FirebaseRegistrationViewModel::class.java]
+        viewModel = ViewModelProvider(requireActivity())[AuthViewModel::class.java]
 
         binding.phoneNumber.addTextChangedListener(AppTextWatcher {
             stringPhone = binding.phoneNumber.text.toString()
@@ -61,13 +62,7 @@ class EnterPhoneNumberFragment : Fragment() {
             }
         })
 
-        register.observe(viewLifecycleOwner, Observer {
-            if (it) {
-
-            }
-        })
-
-        currentUserId.observe(viewLifecycleOwner, Observer {
+        viewModel.userId.observe(viewLifecycleOwner, Observer {
             if (it != "null"){
                 userViewModel = ViewModelProvider(this)[UserViewModel::class.java]
                 val user = User(it.toString(), "", "", "", "", "", stringPhone)
@@ -76,6 +71,23 @@ class EnterPhoneNumberFragment : Fragment() {
                 findNavController().popBackStack()
             }
         })
+        /*register.observe(viewLifecycleOwner, Observer {
+            if (it) {
+
+            }
+        })*/
+
+        /*currentUserId.observe(viewLifecycleOwner, Observer {
+            if (it != "null"){
+                userViewModel = ViewModelProvider(this)[UserViewModel::class.java]
+                val user = User(it.toString(), "", "", "", "", "", stringPhone)
+                userViewModel.addUser(user)
+                Toast.makeText(requireContext(), "Register ok", Toast.LENGTH_LONG).show()
+                findNavController().popBackStack()
+            }
+        })*/
+
+
 
         return binding.root
     }
@@ -85,9 +97,9 @@ class EnterPhoneNumberFragment : Fragment() {
         val builder = AlertDialog.Builder(requireContext())
         builder.setPositiveButton("Yes") { _, _ ->
             binding.phoneNumber.focusable = View.NOT_FOCUSABLE
-            registrationUseCase = RegistrationUseCase(
-                firebaseRegistration = FirebaseRegistrationImpl(requireActivity())
-            )
+            /*registrationUseCase = RegistrationUseCase(
+                firebaseRegistration = FirebaseRegistrationImpl()
+            )*/
             registrationUseCase.enterPhoneNumber(phoneNumber = string)
         }
         builder.setNegativeButton("No") { _, _ ->
