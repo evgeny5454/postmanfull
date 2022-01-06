@@ -45,9 +45,7 @@ class ContactsFragment : Fragment() {
     private var listDatabase = mutableListOf<String>()
     private var emptyList = false
 
-    init {
 
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -68,15 +66,15 @@ class ContactsFragment : Fragment() {
 
 
         userViewModel.readAllContacts.observe(viewLifecycleOwner, Observer { list ->
-            CoroutineScope(Dispatchers.IO).launch {
-                initContacts()
-            }
-
             if (list.isEmpty()) {
-                binding.progress.visibility = View.VISIBLE
                 emptyList = true
+                binding.progress.visibility = View.VISIBLE
+                CoroutineScope(Dispatchers.IO).launch {
+                    initContacts()
+                }
 
             } else {
+                emptyList = false
                 val listToAdapter = mutableListOf<UserData>()
                 list.forEach { it ->
                     val user = UserData(
@@ -89,44 +87,29 @@ class ContactsFragment : Fragment() {
                 }
                 binding.progress.visibility = View.GONE
                 adapter.addContacts(listToAdapter)
-                /*listToAdapter.forEach {
+                listToAdapter.forEach {
                     val id = it.id
                     Log.d("LISTDATABASE", id)
                     listDatabase.add(id)
                     Log.d("LISTDATABASE", listDatabase.toString())
-                }*/
-                emptyList = false
+                }
+                CoroutineScope(Dispatchers.IO).launch {
+                    initContacts()
+                }
             }
         })
 
         dataContacts.observe(viewLifecycleOwner, Observer { users ->
-            users.forEach { user ->
-                if (listDatabase.contains(user.id)) {
-                    Log.d("ADDNEWUSER",
-                        "listDatabase contains ${user.id} ")
-                } else {
-                    Log.d("ADDNEWUSER",
-                        "listDatabase not contains ${user.id} ")
-                    userViewModel.readAllContacts
-                        .observe(viewLifecycleOwner, Observer {userDatabase ->
-                            userDatabase.forEach {
-                                it.dataBaseId
-                                Log.d("ADDNEWUSER", it.dataBaseId)
-                            }
-                            Log.d("ADDNEWUSER",
-                                "users size =${users.size} database size = ${userDatabase.size} ")
-                            if (users.size > userDatabase.size && userDatabase.isEmpty() && !listDatabase.contains(user.id)) {
-                                addContactToRoom(user)
-                                Log.d("ADDNEWUSER", "user id ${user.id} added ")
-                            } else if (users.size > userDatabase.size && userDatabase.isNotEmpty() && !listDatabase.contains(user.id))  {
-                                addContactToRoom(user)
-                                Log.d("ADDNEWUSER",
-                                    "users size =${users.size} database size = ${userDatabase.size} ")
-                            }
-                        })
-                }
+
+            if (listDatabase.isEmpty() && !listDatabase.contains(users.last().id) && emptyList) {
+                addContactToRoom(users.last())
+            } else if (listDatabase.isNotEmpty() && !listDatabase.contains(users.last().id) && !emptyList) {
+                addContactToRoom(users.last())
+                binding.progress.visibility = View.VISIBLE
             }
         })
+
+
 
         binding.toolbar.setOnMenuItemClickListener {
             when (it.itemId) {
