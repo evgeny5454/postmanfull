@@ -7,7 +7,7 @@
     android:background="@color/app_main_background_color">
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/navDrawer_photo_fiend"
+        android:id="@+id/materialUserPhoto"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
@@ -17,14 +17,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/userPhotoFelid"
+            android:id="@+id/userPhoto"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
     </com.google.android.material.card.MaterialCardView>
 
     <TextView
-        android:id="@+id/navUserName"
+        android:id="@+id/userName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -32,11 +32,11 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="@+id/navDrawer_photo_fiend"
-        app:layout_constraintTop_toBottomOf="@+id/navDrawer_photo_fiend" />
+        app:layout_constraintStart_toStartOf="@+id/materialUserPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/materialUserPhoto" />
 
     <TextView
-        android:id="@+id/navUserPhone"
+        android:id="@+id/userPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="+7 985 614 19 17"
@@ -44,7 +44,7 @@
         android:paddingBottom="10dp"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/navUserName"
-        app:layout_constraintTop_toBottomOf="@+id/navUserName" />
+        app:layout_constraintStart_toStartOf="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

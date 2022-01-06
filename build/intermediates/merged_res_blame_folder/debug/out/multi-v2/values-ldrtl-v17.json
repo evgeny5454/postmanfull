@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldrtl-v17\\values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\evgen\\.gradle\\caches\\transforms-2\\files-2.1\\127e4fe1a30a4175201e6ba7f60573dc\\material-1.5.0-alpha05\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "source": "C:\\Users\\evgen\\.gradle\\caches\\transforms-2\\files-2.1\\3c9e3b44b58b63180b8e7ea8670f94fc\\material-1.6.0-alpha01\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

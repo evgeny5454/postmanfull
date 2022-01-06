@@ -16,10 +16,8 @@ import com.evgeny_m.postman.presentation.userscreens.settings.screens.photoBotto
 
 class PhotoBottomSheetAdapter(
     private val context: Context,
-    private val activity: FragmentActivity?,
-    //private val viewModel: SettingsViewModel
-) :
-    RecyclerView.Adapter<PhotoBottomSheetAdapter.PhotoFragmentHolder>() {
+    private val activity: FragmentActivity?
+) : RecyclerView.Adapter<PhotoBottomSheetAdapter.PhotoFragmentHolder>() {
 
     private var listImagesCache = emptyList<MediaStoreImage>()
 
@@ -35,7 +33,6 @@ class PhotoBottomSheetAdapter(
     }
 
     override fun onBindViewHolder(holder: PhotoFragmentHolder, position: Int) {
-
         Glide.with(context)
             .load(listImagesCache[position].contentUri)
             .thumbnail(0.33f)
@@ -43,12 +40,9 @@ class PhotoBottomSheetAdapter(
             .into(holder.image)
         holder.imageView.setOnClickListener {
             photoUri = listImagesCache[position].contentUri
-            //viewModel.setPhotoUri(photoUri.toString())
             photoBottomSheetFragment.dismiss()
             activity?.findNavController(R.id.nav_content_host)?.navigate(R.id.photoFragment)
-
         }
-
     }
 
     override fun getItemCount(): Int {

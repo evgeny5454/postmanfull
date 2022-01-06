@@ -17,8 +17,6 @@ class SingleChatFragment : Fragment() {
 
     private lateinit var binding: FragmentSingleChatBinding
 
-    //private val viewModel: SingleChatViewModel by viewModels { SingleChatViewModelFactory() }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

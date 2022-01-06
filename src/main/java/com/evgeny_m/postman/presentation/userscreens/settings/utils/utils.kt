@@ -15,7 +15,7 @@ import java.io.File
 import java.io.FileOutputStream
 import java.util.*
 
-fun saveImageToExternalStorage(folderToSave: File?, cropFile: Bitmap?) : String {
+/*fun saveImageToExternalStorage(folderToSave: File?, cropFile: Bitmap?) : String {
     val uuid = UUID.randomUUID().toString()
     val file = File(folderToSave, "$uuid.jpg")
     val fOut = FileOutputStream(file)
@@ -23,13 +23,14 @@ fun saveImageToExternalStorage(folderToSave: File?, cropFile: Bitmap?) : String 
     fOut.flush()
     fOut.close()
     return file.absolutePath
-}
+}*/
 
 fun Fragment.initBackButton(toolbar: Toolbar) {
     drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
     toolbar.setNavigationIcon(R.drawable.ic_back)
     toolbar.setNavigationOnClickListener {
         view?.findNavController()?.popBackStack()
+        hideKeyboard()
         drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
     }
 }

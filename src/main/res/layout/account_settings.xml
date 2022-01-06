@@ -44,11 +44,12 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/user_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="10dp"
-                android:text="89856141917"
+                tools:text="89856141917"
                 android:textSize="16sp" />
 
             <TextView
@@ -77,7 +78,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/userNameText"
+                android:id="@+id/user_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -111,7 +112,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/userBioText"
+                android:id="@+id/user_bio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"

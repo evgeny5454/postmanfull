@@ -20,7 +20,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/bio"
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"

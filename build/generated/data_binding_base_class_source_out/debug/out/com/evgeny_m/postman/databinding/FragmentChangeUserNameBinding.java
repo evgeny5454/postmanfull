@@ -20,16 +20,16 @@ public final class FragmentChangeUserNameBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final EditText editText;
-
-  @NonNull
   public final Toolbar toolbar;
 
-  private FragmentChangeUserNameBinding(@NonNull LinearLayout rootView, @NonNull EditText editText,
-      @NonNull Toolbar toolbar) {
+  @NonNull
+  public final EditText userName;
+
+  private FragmentChangeUserNameBinding(@NonNull LinearLayout rootView, @NonNull Toolbar toolbar,
+      @NonNull EditText userName) {
     this.rootView = rootView;
-    this.editText = editText;
     this.toolbar = toolbar;
+    this.userName = userName;
   }
 
   @Override
@@ -59,19 +59,19 @@ public final class FragmentChangeUserNameBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.editText;
-      EditText editText = rootView.findViewById(id);
-      if (editText == null) {
-        break missingId;
-      }
-
       id = R.id.toolbar;
       Toolbar toolbar = rootView.findViewById(id);
       if (toolbar == null) {
         break missingId;
       }
 
-      return new FragmentChangeUserNameBinding((LinearLayout) rootView, editText, toolbar);
+      id = R.id.userName;
+      EditText userName = rootView.findViewById(id);
+      if (userName == null) {
+        break missingId;
+      }
+
+      return new FragmentChangeUserNameBinding((LinearLayout) rootView, toolbar, userName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

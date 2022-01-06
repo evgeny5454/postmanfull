@@ -3,6 +3,7 @@ package com.evgeny_m.postman.presentation.userscreens.settings.addphotobottomshe
 import android.annotation.SuppressLint
 import android.content.ContentUris
 import android.provider.MediaStore
+import androidx.fragment.app.Fragment
 import com.evgeny_m.postman.presentation.models.MediaStoreImage
 import java.text.SimpleDateFormat
 import java.util.*
@@ -10,7 +11,7 @@ import java.util.concurrent.TimeUnit
 
 
 
-fun PhotoBottomSheetFragment.getPhotos() : List<MediaStoreImage> {
+fun Fragment.getPhotos() : List<MediaStoreImage> {
 
     var arrayPhotos = mutableListOf<MediaStoreImage>()
 

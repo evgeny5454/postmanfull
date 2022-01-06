@@ -13,7 +13,6 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 class PhotoBottomSheetFragment : BottomSheetDialogFragment() {
 
     private lateinit var binding: FragmentPhotoBottomSheetBinding
-    //private val viewModel: MainViewModel by viewModels { MainViewModelFactory(requireContext()) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

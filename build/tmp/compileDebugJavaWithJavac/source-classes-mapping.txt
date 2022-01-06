@@ -1,13 +1,11 @@
-com/evgeny_m/postman/databinding/FragmentEnterPhoneNumberBinding.java
- com.evgeny_m.postman.databinding.FragmentEnterPhoneNumberBinding
+com/evgeny_m/postman/databinding/FragmentRegistrationBinding.java
+ com.evgeny_m.postman.databinding.FragmentRegistrationBinding
 com/evgeny_m/postman/databinding/FragmentPhotoBottomSheetBinding.java
  com.evgeny_m.postman.databinding.FragmentPhotoBottomSheetBinding
 com/evgeny_m/postman/databinding/FragmentSettingsBinding.java
  com.evgeny_m.postman.databinding.FragmentSettingsBinding
 com/evgeny_m/postman/databinding/FragmentChangeUserNameBinding.java
  com.evgeny_m.postman.databinding.FragmentChangeUserNameBinding
-com/evgeny_m/postman/databinding/FragmentPhotoBinding.java
- com.evgeny_m.postman.databinding.FragmentPhotoBinding
 com/evgeny_m/postman/databinding/FragmentSingleChatBinding.java
  com.evgeny_m.postman.databinding.FragmentSingleChatBinding
 com/evgeny_m/postman/databinding/NavHeaderBinding.java
@@ -20,6 +18,8 @@ com/evgeny_m/postman/databinding/FragmentChangeBioBinding.java
  com.evgeny_m.postman.databinding.FragmentChangeBioBinding
 com/evgeny_m/postman/databinding/FragmentChatsBinding.java
  com.evgeny_m.postman.databinding.FragmentChatsBinding
+com/evgeny_m/postman/databinding/FragmentPhotoEditorBinding.java
+ com.evgeny_m.postman.databinding.FragmentPhotoEditorBinding
 com/evgeny_m/postman/databinding/ActivityMainBinding.java
  com.evgeny_m.postman.databinding.ActivityMainBinding
 com/evgeny_m/postman/databinding/FragmentChangeUserFullNameBinding.java
@@ -30,6 +30,8 @@ com/evgeny_m/postman/BuildConfig.java
  com.evgeny_m.postman.BuildConfig
 com/evgeny_m/postman/databinding/FragmentSplashBinding.java
  com.evgeny_m.postman.databinding.FragmentSplashBinding
+com/evgeny_m/postman/databinding/FragmentContactsBinding.java
+ com.evgeny_m.postman.databinding.FragmentContactsBinding
 com/evgeny_m/postman/databinding/ItemMessageBinding.java
  com.evgeny_m.postman.databinding.ItemMessageBinding
 com/evgeny_m/postman/databinding/AccountSettingsBinding.java
@@ -38,3 +40,5 @@ com/evgeny_m/postman/databinding/FragmentNavigationBinding.java
  com.evgeny_m.postman.databinding.FragmentNavigationBinding
 com/evgeny_m/postman/databinding/BottomSheetBinding.java
  com.evgeny_m.postman.databinding.BottomSheetBinding
+com/evgeny_m/postman/databinding/ItemContactBinding.java
+ com.evgeny_m.postman.databinding.ItemContactBinding

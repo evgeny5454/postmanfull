@@ -21,25 +21,25 @@ public final class FragmentNavigationBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final MaterialCardView navDrawerPhotoFiend;
+  public final MaterialCardView materialUserPhoto;
 
   @NonNull
-  public final TextView navUserName;
+  public final TextView userName;
 
   @NonNull
-  public final TextView navUserPhone;
+  public final TextView userPhone;
 
   @NonNull
-  public final ImageView userPhotoFelid;
+  public final ImageView userPhoto;
 
   private FragmentNavigationBinding(@NonNull ConstraintLayout rootView,
-      @NonNull MaterialCardView navDrawerPhotoFiend, @NonNull TextView navUserName,
-      @NonNull TextView navUserPhone, @NonNull ImageView userPhotoFelid) {
+      @NonNull MaterialCardView materialUserPhoto, @NonNull TextView userName,
+      @NonNull TextView userPhone, @NonNull ImageView userPhoto) {
     this.rootView = rootView;
-    this.navDrawerPhotoFiend = navDrawerPhotoFiend;
-    this.navUserName = navUserName;
-    this.navUserPhone = navUserPhone;
-    this.userPhotoFelid = userPhotoFelid;
+    this.materialUserPhoto = materialUserPhoto;
+    this.userName = userName;
+    this.userPhone = userPhone;
+    this.userPhoto = userPhoto;
   }
 
   @Override
@@ -69,32 +69,32 @@ public final class FragmentNavigationBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.navDrawer_photo_fiend;
-      MaterialCardView navDrawerPhotoFiend = rootView.findViewById(id);
-      if (navDrawerPhotoFiend == null) {
+      id = R.id.materialUserPhoto;
+      MaterialCardView materialUserPhoto = rootView.findViewById(id);
+      if (materialUserPhoto == null) {
         break missingId;
       }
 
-      id = R.id.navUserName;
-      TextView navUserName = rootView.findViewById(id);
-      if (navUserName == null) {
+      id = R.id.userName;
+      TextView userName = rootView.findViewById(id);
+      if (userName == null) {
         break missingId;
       }
 
-      id = R.id.navUserPhone;
-      TextView navUserPhone = rootView.findViewById(id);
-      if (navUserPhone == null) {
+      id = R.id.userPhone;
+      TextView userPhone = rootView.findViewById(id);
+      if (userPhone == null) {
         break missingId;
       }
 
-      id = R.id.userPhotoFelid;
-      ImageView userPhotoFelid = rootView.findViewById(id);
-      if (userPhotoFelid == null) {
+      id = R.id.userPhoto;
+      ImageView userPhoto = rootView.findViewById(id);
+      if (userPhoto == null) {
         break missingId;
       }
 
-      return new FragmentNavigationBinding((ConstraintLayout) rootView, navDrawerPhotoFiend,
-          navUserName, navUserPhone, userPhotoFelid);
+      return new FragmentNavigationBinding((ConstraintLayout) rootView, materialUserPhoto, userName,
+          userPhone, userPhoto);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

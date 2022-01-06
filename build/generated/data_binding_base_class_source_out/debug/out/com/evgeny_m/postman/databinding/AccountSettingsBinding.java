@@ -35,23 +35,28 @@ public final class AccountSettingsBinding implements ViewBinding {
   public final TextView text;
 
   @NonNull
-  public final TextView userBioText;
+  public final TextView userBio;
 
   @NonNull
-  public final TextView userNameText;
+  public final TextView userName;
+
+  @NonNull
+  public final TextView userPhone;
 
   private AccountSettingsBinding(@NonNull ConstraintLayout rootView,
       @NonNull MaterialCardView buttonUserBio, @NonNull MaterialCardView buttonUserName,
       @NonNull MaterialCardView buttonUserNumber, @NonNull MaterialCardView materialHeader,
-      @NonNull TextView text, @NonNull TextView userBioText, @NonNull TextView userNameText) {
+      @NonNull TextView text, @NonNull TextView userBio, @NonNull TextView userName,
+      @NonNull TextView userPhone) {
     this.rootView = rootView;
     this.buttonUserBio = buttonUserBio;
     this.buttonUserName = buttonUserName;
     this.buttonUserNumber = buttonUserNumber;
     this.materialHeader = materialHeader;
     this.text = text;
-    this.userBioText = userBioText;
-    this.userNameText = userNameText;
+    this.userBio = userBio;
+    this.userName = userName;
+    this.userPhone = userPhone;
   }
 
   @Override
@@ -111,20 +116,26 @@ public final class AccountSettingsBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.userBioText;
-      TextView userBioText = rootView.findViewById(id);
-      if (userBioText == null) {
+      id = R.id.user_bio;
+      TextView userBio = rootView.findViewById(id);
+      if (userBio == null) {
         break missingId;
       }
 
-      id = R.id.userNameText;
-      TextView userNameText = rootView.findViewById(id);
-      if (userNameText == null) {
+      id = R.id.user_name;
+      TextView userName = rootView.findViewById(id);
+      if (userName == null) {
+        break missingId;
+      }
+
+      id = R.id.user_phone;
+      TextView userPhone = rootView.findViewById(id);
+      if (userPhone == null) {
         break missingId;
       }
 
       return new AccountSettingsBinding((ConstraintLayout) rootView, buttonUserBio, buttonUserName,
-          buttonUserNumber, materialHeader, text, userBioText, userNameText);
+          buttonUserNumber, materialHeader, text, userBio, userName, userPhone);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -1,15 +1,15 @@
 [
     {
-        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_chats.xml",
-        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_chats.xml"
+        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_splash.xml",
+        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_splash.xml"
     },
     {
         "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nav_content.xml",
         "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\nav_content.xml"
     },
     {
-        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_splash.xml",
-        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_splash.xml"
+        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_chats.xml",
+        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_chats.xml"
     },
     {
         "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_photo.xml",
@@ -28,20 +28,24 @@
         "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\item_message.xml"
     },
     {
+        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_contacts.xml",
+        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_contacts.xml"
+    },
+    {
+        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_contact.xml",
+        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\item_contact.xml"
+    },
+    {
         "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_change_user_name.xml",
         "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_change_user_name.xml"
     },
     {
-        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_photo.xml",
-        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_photo.xml"
+        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_registration.xml",
+        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_registration.xml"
     },
     {
         "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_change_bio.xml",
         "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_change_bio.xml"
-    },
-    {
-        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_enter_phone_number.xml",
-        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_enter_phone_number.xml"
     },
     {
         "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_settings.xml",
@@ -62,6 +66,10 @@
     {
         "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_single_chat.xml",
         "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_single_chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_photo_editor.xml",
+        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_photo_editor.xml"
     },
     {
         "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\account_settings.xml",

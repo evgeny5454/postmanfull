@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import com.evgeny_m.data.chatsfirebase.result
+import com.evgeny_m.data.oldcode.chatsfirebase.result
 import com.evgeny_m.postman.databinding.FragmentSplashBinding
 import com.evgeny_m.postman.drawerLayout
 

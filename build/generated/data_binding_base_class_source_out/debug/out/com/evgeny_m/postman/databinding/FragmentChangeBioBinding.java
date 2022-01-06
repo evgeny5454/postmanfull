@@ -20,15 +20,15 @@ public final class FragmentChangeBioBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final EditText editText;
+  public final EditText bio;
 
   @NonNull
   public final Toolbar toolbar;
 
-  private FragmentChangeBioBinding(@NonNull LinearLayout rootView, @NonNull EditText editText,
+  private FragmentChangeBioBinding(@NonNull LinearLayout rootView, @NonNull EditText bio,
       @NonNull Toolbar toolbar) {
     this.rootView = rootView;
-    this.editText = editText;
+    this.bio = bio;
     this.toolbar = toolbar;
   }
 
@@ -59,9 +59,9 @@ public final class FragmentChangeBioBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.editText;
-      EditText editText = rootView.findViewById(id);
-      if (editText == null) {
+      id = R.id.bio;
+      EditText bio = rootView.findViewById(id);
+      if (bio == null) {
         break missingId;
       }
 
@@ -71,7 +71,7 @@ public final class FragmentChangeBioBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentChangeBioBinding((LinearLayout) rootView, editText, toolbar);
+      return new FragmentChangeBioBinding((LinearLayout) rootView, bio, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -8,12 +8,16 @@
         "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\drawable\\ic_logout.xml"
     },
     {
+        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_content.xml.flat",
+        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\nav_content.xml"
+    },
+    {
         "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_send.xml.flat",
         "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\drawable\\ic_send.xml"
     },
     {
-        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_content.xml.flat",
-        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\nav_content.xml"
+        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_registration.xml.flat",
+        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_registration.xml"
     },
     {
         "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_message.xml.flat",
@@ -28,16 +32,20 @@
         "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_splash.xml"
     },
     {
+        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_contact.xml.flat",
+        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\item_contact.xml"
+    },
+    {
         "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_contacts.xml.flat",
+        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_contacts.xml"
     },
     {
-        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_enter_phone_number.xml.flat",
-        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_enter_phone_number.xml"
+        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\navigation_navigation_main.xml.flat",
@@ -68,12 +76,20 @@
         "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_change_user_name.xml"
     },
     {
+        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\menu_contacts_menu.xml.flat",
+        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\menu\\contacts_menu.xml"
+    },
+    {
         "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\layout_bottom_sheet.xml.flat",
         "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\bottom_sheet.xml"
     },
     {
         "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_single_chat.xml.flat",
         "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_single_chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_photo_editor.xml.flat",
+        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_photo_editor.xml"
     },
     {
         "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_photo_bottom_sheet.xml.flat",
@@ -108,12 +124,12 @@
         "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\menu\\menu_nav_drawer.xml"
     },
     {
-        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_settings.xml.flat",
-        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_settings.xml"
+        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_delete.xml.flat",
+        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\drawable\\ic_delete.xml"
     },
     {
-        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_photo.xml.flat",
-        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_photo.xml"
+        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_settings.xml.flat",
+        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_settings.xml"
     },
     {
         "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_main_navigation.xml.flat",

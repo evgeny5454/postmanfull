@@ -50,7 +50,7 @@
         android:id="@+id/photoFragment"
         android:name="com.evgeny_m.postman.presentation.userscreens.settings.screens.PhotoFragment"
         android:label="fragment_photo"
-        tools:layout="@layout/fragment_photo" />
+        tools:layout="@layout/fragment_photo_editor" />
     <fragment
         android:id="@+id/singleChatFragment"
         android:name="com.evgeny_m.postman.presentation.userscreens.singlechat.SingleChatFragment"
@@ -58,7 +58,12 @@
         tools:layout="@layout/fragment_single_chat" />
     <fragment
         android:id="@+id/enterPhoneNumberFragment"
-        android:name="com.evgeny_m.postman.presentation.userscreens.registrationFragment.EnterPhoneNumberFragment"
+        android:name="com.evgeny_m.postman.presentation.userscreens.registrationFragment.RegistrationFragment"
         android:label="fragment_enter_phone_number"
-        tools:layout="@layout/fragment_enter_phone_number" />
+        tools:layout="@layout/fragment_registration" />
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.evgeny_m.postman.presentation.userscreens.contactsFragment.ContactsFragment"
+        android:label="fragment_contacts"
+        tools:layout="@layout/fragment_contacts" />
 </navigation>

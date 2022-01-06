@@ -38,19 +38,19 @@ public final class FragmentSettingsBinding implements ViewBinding {
   public final CollapsingToolbarLayout toolbarCollapsing;
 
   @NonNull
-  public final ImageView userPhotoFelid;
+  public final ImageView userPhoto;
 
   private FragmentSettingsBinding(@NonNull CoordinatorLayout rootView,
       @NonNull AccountSettingsBinding accountSettings, @NonNull FloatingActionButton addPhoto,
       @NonNull AppBarLayout appBar, @NonNull Toolbar toolbar,
-      @NonNull CollapsingToolbarLayout toolbarCollapsing, @NonNull ImageView userPhotoFelid) {
+      @NonNull CollapsingToolbarLayout toolbarCollapsing, @NonNull ImageView userPhoto) {
     this.rootView = rootView;
     this.accountSettings = accountSettings;
     this.addPhoto = addPhoto;
     this.appBar = appBar;
     this.toolbar = toolbar;
     this.toolbarCollapsing = toolbarCollapsing;
-    this.userPhotoFelid = userPhotoFelid;
+    this.userPhoto = userPhoto;
   }
 
   @Override
@@ -111,14 +111,14 @@ public final class FragmentSettingsBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.userPhotoFelid;
-      ImageView userPhotoFelid = rootView.findViewById(id);
-      if (userPhotoFelid == null) {
+      id = R.id.userPhoto;
+      ImageView userPhoto = rootView.findViewById(id);
+      if (userPhoto == null) {
         break missingId;
       }
 
       return new FragmentSettingsBinding((CoordinatorLayout) rootView, binding_accountSettings,
-          addPhoto, appBar, toolbar, toolbarCollapsing, userPhotoFelid);
+          addPhoto, appBar, toolbar, toolbarCollapsing, userPhoto);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
