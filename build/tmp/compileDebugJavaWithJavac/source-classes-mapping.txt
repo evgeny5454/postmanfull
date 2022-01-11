@@ -36,6 +36,8 @@ com/evgeny_m/postman/databinding/ItemMessageBinding.java
  com.evgeny_m.postman.databinding.ItemMessageBinding
 com/evgeny_m/postman/databinding/AccountSettingsBinding.java
  com.evgeny_m.postman.databinding.AccountSettingsBinding
+com/evgeny_m/postman/databinding/FragmentContactDetailsBinding.java
+ com.evgeny_m.postman.databinding.FragmentContactDetailsBinding
 com/evgeny_m/postman/databinding/FragmentNavigationBinding.java
  com.evgeny_m.postman.databinding.FragmentNavigationBinding
 com/evgeny_m/postman/databinding/BottomSheetBinding.java

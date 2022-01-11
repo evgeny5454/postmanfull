@@ -2732,6 +2732,8 @@ id action_bar_spinner
 id action_bar_subtitle
 id action_bar_title
 id action_chatsFragment_to_enterPhoneNumberFragment
+id action_contactsFragment_to_contactDetailsFragment
+id action_contactsFragment_to_singleChatFragment
 id action_container
 id action_context_bar
 id action_divider
@@ -2744,6 +2746,7 @@ id action_mode_close_button
 id action_settingsFragment_to_changeBioFragment
 id action_settingsFragment_to_changeUserFullNameFragment
 id action_settingsFragment_to_changeUserNameFragment
+id action_singleChatFragment_to_chatsFragment
 id action_text
 id actions
 id activity_chooser_view_content
@@ -2840,6 +2843,8 @@ id confirm_button
 id confirmation_code
 id confirmation_code_layout
 id constraint
+id contact
+id contactDetailsFragment
 id contactsFragment
 id container
 id content
@@ -2967,7 +2972,6 @@ id item1
 id item2
 id item3
 id item4
-id item_contact_user_card_view
 id item_image
 id item_menu_navigation_invite_friends
 id item_touch_helper_previous_elevation
@@ -3268,6 +3272,7 @@ id userPhone
 id userPhoto
 id userPhotoFelid
 id user_bio
+id user_details
 id user_name
 id user_phone
 id vertical_only
@@ -3409,6 +3414,7 @@ layout fragment_change_bio
 layout fragment_change_user_full_name
 layout fragment_change_user_name
 layout fragment_chats
+layout fragment_contact_details
 layout fragment_contacts
 layout fragment_navigation
 layout fragment_photo_bottom_sheet

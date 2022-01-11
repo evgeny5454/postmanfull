@@ -72,6 +72,10 @@
         "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_photo_editor.xml"
     },
     {
+        "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_contact_details.xml",
+        "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\fragment_contact_details.xml"
+    },
+    {
         "merged": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\account_settings.xml",
         "source": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\src\\main\\res\\layout\\account_settings.xml"
     },

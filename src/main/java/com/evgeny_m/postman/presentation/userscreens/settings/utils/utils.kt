@@ -9,6 +9,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.evgeny_m.postman.R
 import com.evgeny_m.postman.drawerLayout
 import java.io.File
@@ -29,6 +30,16 @@ fun Fragment.initBackButton(toolbar: Toolbar) {
     drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
     toolbar.setNavigationIcon(R.drawable.ic_back)
     toolbar.setNavigationOnClickListener {
+        view?.findNavController()?.popBackStack()
+        hideKeyboard()
+        drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
+    }
+}
+fun Fragment.initBackButtonToChats(toolbar: Toolbar) {
+    drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+    toolbar.setNavigationIcon(R.drawable.ic_back)
+    toolbar.setNavigationOnClickListener {
+        view?.findNavController()?.popBackStack()
         view?.findNavController()?.popBackStack()
         hideKeyboard()
         drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)

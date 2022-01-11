@@ -55,7 +55,14 @@
         android:id="@+id/singleChatFragment"
         android:name="com.evgeny_m.postman.presentation.userscreens.singlechat.SingleChatFragment"
         android:label="fragment_single_chat"
-        tools:layout="@layout/fragment_single_chat" />
+        tools:layout="@layout/fragment_single_chat" >
+        <argument
+            android:name="currentUser"
+            app:argType="com.evgeny_m.data.models.UserData" />
+        <action
+            android:id="@+id/action_singleChatFragment_to_chatsFragment"
+            app:destination="@id/chatsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/enterPhoneNumberFragment"
         android:name="com.evgeny_m.postman.presentation.userscreens.registrationFragment.RegistrationFragment"
@@ -65,5 +72,21 @@
         android:id="@+id/contactsFragment"
         android:name="com.evgeny_m.postman.presentation.userscreens.contactsFragment.ContactsFragment"
         android:label="fragment_contacts"
-        tools:layout="@layout/fragment_contacts" />
+        tools:layout="@layout/fragment_contacts" >
+        <action
+            android:id="@+id/action_contactsFragment_to_contactDetailsFragment"
+            app:destination="@id/contactDetailsFragment" />
+        <action
+            android:id="@+id/action_contactsFragment_to_singleChatFragment"
+            app:destination="@id/singleChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactDetailsFragment"
+        android:name="com.evgeny_m.postman.presentation.userscreens.contact_details.ContactDetailsFragment"
+        android:label="fragment_contact_details"
+        tools:layout="@layout/fragment_contact_details" >
+        <argument
+            android:name="currentUser"
+            app:argType="com.evgeny_m.data.models.UserData" />
+    </fragment>
 </navigation>

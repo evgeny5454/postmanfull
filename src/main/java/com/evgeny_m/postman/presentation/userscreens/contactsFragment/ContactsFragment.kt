@@ -13,8 +13,6 @@ import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -44,8 +42,7 @@ class ContactsFragment : Fragment() {
     private lateinit var viewModelSettings: SettingsViewModel
     private var listDatabase = mutableListOf<String>()
     private var emptyList = false
-
-
+    //private var boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -64,15 +61,11 @@ class ContactsFragment : Fragment() {
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapter
 
-
         userViewModel.readAllContacts.observe(viewLifecycleOwner, Observer { list ->
             if (list.isEmpty()) {
                 emptyList = true
                 binding.progress.visibility = View.VISIBLE
-                CoroutineScope(Dispatchers.IO).launch {
-                    initContacts()
-                }
-
+                launchContactsToCoroutine()
             } else {
                 emptyList = false
                 val listToAdapter = mutableListOf<UserData>()
@@ -81,7 +74,10 @@ class ContactsFragment : Fragment() {
                         id = it.dataBaseId,
                         name = it.name,
                         status = it.status,
-                        photo = it.photo
+                        photo = it.photo,
+                        bio = it.bio,
+                        phone = it.phone,
+                        userName = it.userName
                     )
                     listToAdapter.add(user)
                 }
@@ -89,27 +85,26 @@ class ContactsFragment : Fragment() {
                 adapter.addContacts(listToAdapter)
                 listToAdapter.forEach {
                     val id = it.id
-                    Log.d("LISTDATABASE", id)
-                    listDatabase.add(id)
-                    Log.d("LISTDATABASE", listDatabase.toString())
+                    //Log.d("LISTDATABASE", id)
+                    if (id != null) {
+                        listDatabase.add(id)
+                    }
+                    //Log.d("LISTDATABASE", listDatabase.toString())
                 }
-                CoroutineScope(Dispatchers.IO).launch {
-                    initContacts()
-                }
+                launchContactsToCoroutine()
             }
         })
 
         dataContacts.observe(viewLifecycleOwner, Observer { users ->
-
             if (listDatabase.isEmpty() && !listDatabase.contains(users.last().id) && emptyList) {
                 addContactToRoom(users.last())
             } else if (listDatabase.isNotEmpty() && !listDatabase.contains(users.last().id) && !emptyList) {
                 addContactToRoom(users.last())
-                binding.progress.visibility = View.VISIBLE
+                if (listDatabase.size < 5) {
+                    binding.progress.visibility = View.VISIBLE
+                }
             }
         })
-
-
 
         binding.toolbar.setOnMenuItemClickListener {
             when (it.itemId) {
@@ -124,19 +119,27 @@ class ContactsFragment : Fragment() {
         return binding.root
     }
 
-
     private fun addContactToRoom(user: UserData) {
         val listToRoom = mutableListOf<ContactRoom>()
         val newUser = ContactRoom(
             id = 0,
-            dataBaseId = user.id,
-            name = user.name,
-            status = user.status,
-            photo = user.photo
+            dataBaseId = user.id ?:"",
+            name = user.name ?:"",
+            status = user.status ?:"",
+            photo = user.photo ?:"",
+            bio = user.bio ?: "",
+            phone = user.phone ?:"",
+            userName = user.userName?: ""
         )
         listToRoom.add(newUser)
         userViewModel.addListContacts(listToRoom)
         Log.d("SizeContactsFromBD", "${listToRoom.size}")
+    }
+
+    private fun launchContactsToCoroutine(){
+        CoroutineScope(Dispatchers.IO).launch {
+            initContacts()
+        }
     }
 
     @SuppressLint("Range")
@@ -191,7 +194,8 @@ class ContactsFragment : Fragment() {
         } else true
     }
 
-    companion object {
-        //private lateinit var listContacts: List<ContactRoom>
+    override fun onResume() {
+        super.onResume()
     }
+
 }

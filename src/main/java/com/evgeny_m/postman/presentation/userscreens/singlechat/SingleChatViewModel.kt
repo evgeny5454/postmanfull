@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.evgeny_m.domain.models.DomainMessageModel
-import com.evgeny_m.domain.usecase.GetMessagesUseCase
-import com.evgeny_m.domain.usecase.SendMessageUseCase
+import com.evgeny_m.domain.usecase.single_chat.GetMessagesUseCase
+import com.evgeny_m.domain.usecase.single_chat.SendMessageUseCase
 
 class SingleChatViewModel(
     private val getMessagesUseCase: GetMessagesUseCase,
@@ -23,16 +23,7 @@ class SingleChatViewModel(
     }
 
     fun loadMessages() {
-        mutableMessages.value = getMessagesUseCase.execute()
+        //mutableMessages.value = getMessagesUseCase.execute()
     }
 
-    fun sendMessage(text: String) {
-        sendMessageUseCase
-            .execute(
-                message = text,
-                "1111",
-                "4444",
-                "text"
-            )
-    }
 }

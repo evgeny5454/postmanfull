@@ -11,6 +11,8 @@ import com.evgeny_m.domain.usecase.contacts.GetContactsFromDatabaseUseCase
 import com.evgeny_m.domain.usecase.contacts.GetUserDataByIdUseCase
 import com.evgeny_m.domain.usecase.main.EditStatusUseCase
 import com.evgeny_m.domain.usecase.settingsfragment.*
+import com.evgeny_m.domain.usecase.single_chat.GetMessagesUseCase
+import com.evgeny_m.domain.usecase.single_chat.SendMessageUseCase
 
 class SettingsViewModel(
     private val editFullNameUseCase: EditFullNameUseCase,
@@ -23,7 +25,9 @@ class SettingsViewModel(
     private val editStatusUseCase: EditStatusUseCase,
     private val checkContactsUseCase: CheckContactsUseCase,
     private val getContactsFromDatabaseUseCase: GetContactsFromDatabaseUseCase,
-    private val getUserDataByIdUseCase: GetUserDataByIdUseCase
+    private val getUserDataByIdUseCase: GetUserDataByIdUseCase,
+    private val sendMessageUseCase: SendMessageUseCase,
+    private val getMessagesUseCase: GetMessagesUseCase
 ) : ViewModel() {
 
     private val mutableCheckUserName = MutableLiveData<Boolean>()
@@ -79,5 +83,13 @@ class SettingsViewModel(
 
     fun loadUserData(list: List<DomainDataContact> ) {
         getUserDataByIdUseCase.execute(list)
+    }
+
+    fun sendMessage(text: String, userId: String) {
+        sendMessageUseCase.execute(text, userId)
+    }
+
+    fun loadMessages(userId: String) {
+        getMessagesUseCase.execute(userId)
     }
 }

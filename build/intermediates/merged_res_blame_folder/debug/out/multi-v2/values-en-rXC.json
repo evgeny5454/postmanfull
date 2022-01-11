@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\evgen\\AndroidStudioProjects\\Postman\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rXC\\values-en-rXC.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\evgen\\.gradle\\caches\\transforms-2\\files-2.1\\966d1273bda648f7728ba5632dd16588\\appcompat-1.4.0\\res\\values-en-rXC\\values-en-rXC.xml",
+                    "source": "C:\\Users\\evgen\\.gradle\\caches\\transforms-2\\files-2.1\\08638a9f6c07eb2c6501992db5342bf3\\appcompat-1.4.0\\res\\values-en-rXC\\values-en-rXC.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\evgen\\.gradle\\caches\\transforms-2\\files-2.1\\a3282ed2249be71aa9164a16cd222148\\core-1.7.0\\res\\values-en-rXC\\values-en-rXC.xml",
+                    "source": "C:\\Users\\evgen\\.gradle\\caches\\transforms-2\\files-2.1\\3f3151166d25ffa5be5782098dea2b50\\core-1.7.0\\res\\values-en-rXC\\values-en-rXC.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

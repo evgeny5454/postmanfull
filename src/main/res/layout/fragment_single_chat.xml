@@ -56,10 +56,10 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toEndOf="@+id/user"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:text="John Smith" />
+                    tools:text="John Smith" />
 
                 <TextView
-                    android:id="@+id/userLastMessage"
+                    android:id="@+id/status"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -70,7 +70,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/userName"
                     app:layout_constraintTop_toBottomOf="@+id/userName"
-                    android:text="online" />
+                    tools:text="online" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

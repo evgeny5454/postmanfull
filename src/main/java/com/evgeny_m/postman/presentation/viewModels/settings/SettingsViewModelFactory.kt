@@ -9,6 +9,8 @@ import com.evgeny_m.domain.usecase.contacts.GetContactsFromDatabaseUseCase
 import com.evgeny_m.domain.usecase.contacts.GetUserDataByIdUseCase
 import com.evgeny_m.domain.usecase.main.EditStatusUseCase
 import com.evgeny_m.domain.usecase.settingsfragment.*
+import com.evgeny_m.domain.usecase.single_chat.GetMessagesUseCase
+import com.evgeny_m.domain.usecase.single_chat.SendMessageUseCase
 
 class SettingsViewModelFactory(context: Context) : ViewModelProvider.Factory {
 
@@ -54,6 +56,13 @@ class SettingsViewModelFactory(context: Context) : ViewModelProvider.Factory {
         GetUserDataByIdUseCase(firebase = firebase)
     }
 
+    private val sendMessageUseCase by lazy(LazyThreadSafetyMode.NONE) {
+        SendMessageUseCase(firebase = firebase)
+    }
+    private val getMessagesUseCase by lazy(LazyThreadSafetyMode.NONE) {
+        GetMessagesUseCase(firebase = firebase)
+    }
+
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return SettingsViewModel(
             editBioUseCase = editBioUseCase,
@@ -66,7 +75,9 @@ class SettingsViewModelFactory(context: Context) : ViewModelProvider.Factory {
             editStatusUseCase = editStatusUseCase,
             checkContactsUseCase = checkContactsUseCase,
             getContactsFromDatabaseUseCase = getContactsFromDatabaseUseCase,
-            getUserDataByIdUseCase = getUserDataByIdUseCase
+            getUserDataByIdUseCase = getUserDataByIdUseCase,
+            sendMessageUseCase = sendMessageUseCase,
+            getMessagesUseCase = getMessagesUseCase
         ) as T
     }
 }
