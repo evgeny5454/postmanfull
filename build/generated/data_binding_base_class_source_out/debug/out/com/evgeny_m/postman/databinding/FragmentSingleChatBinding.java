@@ -41,13 +41,13 @@ public final class FragmentSingleChatBinding implements ViewBinding {
   public final RecyclerView recyclerView;
 
   @NonNull
+  public final TextView status;
+
+  @NonNull
   public final Toolbar toolbar;
 
   @NonNull
   public final MaterialCardView user;
-
-  @NonNull
-  public final TextView userLastMessage;
 
   @NonNull
   public final TextView userName;
@@ -58,17 +58,17 @@ public final class FragmentSingleChatBinding implements ViewBinding {
   private FragmentSingleChatBinding(@NonNull ConstraintLayout rootView,
       @NonNull AppBarLayout appBarLayout, @NonNull MaterialCardView bottomBar,
       @NonNull MaterialButton buttonSend, @NonNull EditText messageText,
-      @NonNull RecyclerView recyclerView, @NonNull Toolbar toolbar, @NonNull MaterialCardView user,
-      @NonNull TextView userLastMessage, @NonNull TextView userName, @NonNull ImageView userPhoto) {
+      @NonNull RecyclerView recyclerView, @NonNull TextView status, @NonNull Toolbar toolbar,
+      @NonNull MaterialCardView user, @NonNull TextView userName, @NonNull ImageView userPhoto) {
     this.rootView = rootView;
     this.appBarLayout = appBarLayout;
     this.bottomBar = bottomBar;
     this.buttonSend = buttonSend;
     this.messageText = messageText;
     this.recyclerView = recyclerView;
+    this.status = status;
     this.toolbar = toolbar;
     this.user = user;
-    this.userLastMessage = userLastMessage;
     this.userName = userName;
     this.userPhoto = userPhoto;
   }
@@ -130,6 +130,12 @@ public final class FragmentSingleChatBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.status;
+      TextView status = rootView.findViewById(id);
+      if (status == null) {
+        break missingId;
+      }
+
       id = R.id.toolbar;
       Toolbar toolbar = rootView.findViewById(id);
       if (toolbar == null) {
@@ -139,12 +145,6 @@ public final class FragmentSingleChatBinding implements ViewBinding {
       id = R.id.user;
       MaterialCardView user = rootView.findViewById(id);
       if (user == null) {
-        break missingId;
-      }
-
-      id = R.id.userLastMessage;
-      TextView userLastMessage = rootView.findViewById(id);
-      if (userLastMessage == null) {
         break missingId;
       }
 
@@ -161,8 +161,7 @@ public final class FragmentSingleChatBinding implements ViewBinding {
       }
 
       return new FragmentSingleChatBinding((ConstraintLayout) rootView, appBarLayout, bottomBar,
-          buttonSend, messageText, recyclerView, toolbar, user, userLastMessage, userName,
-          userPhoto);
+          buttonSend, messageText, recyclerView, status, toolbar, user, userName, userPhoto);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
