@@ -3,13 +3,10 @@ package com.evgeny_m.postman.presentation.viewModels.register
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.evgeny_m.data.repository.FirebaseRepository
-import com.evgeny_m.domain.usecase.main.EditStatusUseCase
-import com.evgeny_m.domain.usecase.register.CheckUserDataUseCase
-import com.evgeny_m.domain.usecase.register.EnterCodeUseCase
-import com.evgeny_m.domain.usecase.register.EnterPhoneNumberUseCase
-import com.evgeny_m.domain.usecase.settingsfragment.*
-import com.evgeny_m.postman.presentation.viewModels.settings.SettingsViewModel
+import com.evgeny_m.postman.data.repository.FirebaseRepository
+import com.evgeny_m.postman.domain.domain.usecase.register.CheckUserDataUseCase
+import com.evgeny_m.postman.domain.domain.usecase.register.EnterCodeUseCase
+import com.evgeny_m.postman.domain.domain.usecase.register.EnterPhoneNumberUseCase
 
 class RegisterViewModelFactory(context: Context) : ViewModelProvider.Factory {
 

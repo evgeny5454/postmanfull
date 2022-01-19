@@ -15,8 +15,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
-import com.evgeny_m.data.models.User
-import com.evgeny_m.data.viewmodels.UserViewModel
+import com.evgeny_m.postman.data.viewmodels.UserViewModel
 import com.evgeny_m.postman.databinding.FragmentPhotoEditorBinding
 import com.evgeny_m.postman.presentation.userscreens.settings.addphotobottomsheet.PhotoBottomSheetAdapter.Companion.photoUri
 import com.evgeny_m.postman.presentation.userscreens.settings.addphotobottomsheet.getPhotos
@@ -101,7 +100,7 @@ class PhotoFragment : Fragment() {
                 })
 
 
-            val user = User(
+            val user = com.evgeny_m.postman.data.models.User(
                 userId,
                 userFirstName,
                 userLastName,

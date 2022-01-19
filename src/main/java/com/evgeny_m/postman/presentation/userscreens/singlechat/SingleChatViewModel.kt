@@ -3,9 +3,9 @@ package com.evgeny_m.postman.presentation.userscreens.singlechat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.evgeny_m.domain.models.DomainMessageModel
-import com.evgeny_m.domain.usecase.single_chat.GetMessagesUseCase
-import com.evgeny_m.domain.usecase.single_chat.SendMessageUseCase
+import com.evgeny_m.postman.domain.domain.models.DomainMessageModel
+import com.evgeny_m.postman.domain.domain.usecase.single_chat.GetMessagesUseCase
+import com.evgeny_m.postman.domain.domain.usecase.single_chat.SendMessageUseCase
 
 class SingleChatViewModel(
     private val getMessagesUseCase: GetMessagesUseCase,

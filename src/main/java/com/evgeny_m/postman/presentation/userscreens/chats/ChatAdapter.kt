@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.evgeny_m.postman.databinding.ItemUserChatBinding
-import com.evgeny_m.domain.models.DomainChatModel
+import com.evgeny_m.postman.domain.domain.models.DomainChatModel
 
 class ChatAdapter(
     private val context: Context

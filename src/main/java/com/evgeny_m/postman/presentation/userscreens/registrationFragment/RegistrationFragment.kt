@@ -12,15 +12,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.evgeny_m.data.models.User
-import com.evgeny_m.data.repository.FirebaseRepository
-import com.evgeny_m.data.repository.currentUserId
-import com.evgeny_m.data.repository.userData
-import com.evgeny_m.data.repository.verificationId
-import com.evgeny_m.data.viewmodels.UserViewModel
-import com.evgeny_m.domain.usecase.register.CheckUserDataUseCase
-import com.evgeny_m.domain.usecase.register.EnterCodeUseCase
-import com.evgeny_m.domain.usecase.register.EnterPhoneNumberUseCase
+import com.evgeny_m.postman.data.repository.currentUserId
+import com.evgeny_m.postman.data.repository.userData
+import com.evgeny_m.postman.data.repository.verificationId
+import com.evgeny_m.postman.data.viewmodels.UserViewModel
 import com.evgeny_m.postman.databinding.FragmentRegistrationBinding
 import com.evgeny_m.postman.presentation.utils.AppTextWatcher
 import com.evgeny_m.postman.presentation.utils.hideKeyboard
@@ -65,7 +60,7 @@ class RegistrationFragment : Fragment() {
 
         userData.observe(viewLifecycleOwner, Observer {
             if (it != null) {
-                val user = User(
+                val user = com.evgeny_m.postman.data.models.User(
                     id = userId,
                     firstName = it.firstName,
                     lastName = it.lastName,

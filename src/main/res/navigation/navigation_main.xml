@@ -58,7 +58,7 @@
         tools:layout="@layout/fragment_single_chat" >
         <argument
             android:name="currentUser"
-            app:argType="com.evgeny_m.data.models.UserData" />
+            app:argType="com.evgeny_m.postman.data.models.UserData" />
         <action
             android:id="@+id/action_singleChatFragment_to_chatsFragment"
             app:destination="@id/chatsFragment" />
@@ -74,11 +74,11 @@
         android:label="fragment_contacts"
         tools:layout="@layout/fragment_contacts" >
         <action
-            android:id="@+id/action_contactsFragment_to_contactDetailsFragment"
-            app:destination="@id/contactDetailsFragment" />
-        <action
             android:id="@+id/action_contactsFragment_to_singleChatFragment"
             app:destination="@id/singleChatFragment" />
+        <action
+            android:id="@+id/action_contactsFragment_to_contactDetailsFragment"
+            app:destination="@id/contactDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/contactDetailsFragment"
@@ -87,6 +87,6 @@
         tools:layout="@layout/fragment_contact_details" >
         <argument
             android:name="currentUser"
-            app:argType="com.evgeny_m.data.models.UserData" />
+            app:argType="com.evgeny_m.postman.data.models.UserData" />
     </fragment>
 </navigation>

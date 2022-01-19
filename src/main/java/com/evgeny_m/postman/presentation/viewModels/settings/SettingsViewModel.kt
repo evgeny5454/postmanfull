@@ -4,15 +4,14 @@ import android.net.Uri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.evgeny_m.data.models.Contact
-import com.evgeny_m.domain.models.DomainDataContact
-import com.evgeny_m.domain.usecase.contacts.CheckContactsUseCase
-import com.evgeny_m.domain.usecase.contacts.GetContactsFromDatabaseUseCase
-import com.evgeny_m.domain.usecase.contacts.GetUserDataByIdUseCase
-import com.evgeny_m.domain.usecase.main.EditStatusUseCase
-import com.evgeny_m.domain.usecase.settingsfragment.*
-import com.evgeny_m.domain.usecase.single_chat.GetMessagesUseCase
-import com.evgeny_m.domain.usecase.single_chat.SendMessageUseCase
+import com.evgeny_m.postman.domain.domain.models.DomainDataContact
+import com.evgeny_m.postman.domain.domain.usecase.contacts.CheckContactsUseCase
+import com.evgeny_m.postman.domain.domain.usecase.contacts.GetContactsFromDatabaseUseCase
+import com.evgeny_m.postman.domain.domain.usecase.contacts.GetUserDataByIdUseCase
+import com.evgeny_m.postman.domain.domain.usecase.main.EditStatusUseCase
+import com.evgeny_m.postman.domain.domain.usecase.settingsfragment.*
+import com.evgeny_m.postman.domain.domain.usecase.single_chat.GetMessagesUseCase
+import com.evgeny_m.postman.domain.domain.usecase.single_chat.SendMessageUseCase
 
 class SettingsViewModel(
     private val editFullNameUseCase: EditFullNameUseCase,
@@ -65,7 +64,7 @@ class SettingsViewModel(
     fun offline() {
         editStatusUseCase.offline()
     }
-    fun checkContacts(arrayList: ArrayList<Contact>) {
+    fun checkContacts(arrayList: ArrayList<com.evgeny_m.postman.data.models.Contact>) {
         val arrayListContacts : ArrayList<DomainDataContact> = arrayListOf()
         arrayList.forEach{
             val contact = DomainDataContact(

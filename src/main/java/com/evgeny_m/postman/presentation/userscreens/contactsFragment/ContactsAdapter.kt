@@ -7,16 +7,12 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.evgeny_m.data.models.UserData
-import com.evgeny_m.domain.models.DomainDataContact
 import com.evgeny_m.postman.R
 import com.evgeny_m.postman.databinding.ItemContactBinding
-import com.evgeny_m.postman.presentation.userscreens.contact_details.ContactDetailsFragment
-import com.evgeny_m.postman.presentation.userscreens.singlechat.SingleChatFragmentArgs
 
 class ContactsAdapter(private val context: Context): RecyclerView.Adapter<ContactsAdapter.ContactsHolder>() {
 
-    private var listContactsCache = emptyList<UserData>()
+    private var listContactsCache = emptyList<com.evgeny_m.postman.data.models.UserData>()
 
     class ContactsHolder(view: View) : RecyclerView.ViewHolder(view) {
         val binding = ItemContactBinding.bind(view)
@@ -56,7 +52,7 @@ class ContactsAdapter(private val context: Context): RecyclerView.Adapter<Contac
         return listContactsCache.size
     }
 
-    fun addContacts(list: List<UserData>) {
+    fun addContacts(list: List<com.evgeny_m.postman.data.models.UserData>) {
         listContactsCache = list
         notifyDataSetChanged()
     }

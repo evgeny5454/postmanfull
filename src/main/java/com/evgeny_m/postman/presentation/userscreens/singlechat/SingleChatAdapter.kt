@@ -4,11 +4,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.evgeny_m.data.models.MessageModel
-import com.evgeny_m.data.repository.currentUserId
 import com.evgeny_m.postman.R
+import com.evgeny_m.postman.data.repository.currentUserId
 import com.evgeny_m.postman.databinding.ItemMessageBinding
-import com.evgeny_m.domain.models.DomainMessageModel
+import com.evgeny_m.postman.domain.domain.models.DomainMessageModel
 
 interface ChatListener {
     fun selectMessage(message: DomainMessageModel)
@@ -18,7 +17,7 @@ interface ChatListener {
 class SingleChatAdapter :
     RecyclerView.Adapter<SingleChatAdapter.SingleChatHolder>() {
 
-    private var listMessagesCache = mutableListOf<MessageModel>()
+    private var listMessagesCache = mutableListOf<com.evgeny_m.postman.data.models.MessageModel>()
 
     class SingleChatHolder(view: View) : RecyclerView.ViewHolder(view) {
         val binding = ItemMessageBinding.bind(view)
@@ -65,8 +64,8 @@ class SingleChatAdapter :
         return listMessagesCache.size
     }
 
-    fun addMessages(listMessages: List<MessageModel>) {
-        listMessagesCache = listMessages as MutableList<MessageModel>
+    fun addMessages(listMessages: List<com.evgeny_m.postman.data.models.MessageModel>) {
+        listMessagesCache = listMessages as MutableList<com.evgeny_m.postman.data.models.MessageModel>
         notifyDataSetChanged()
     }
 

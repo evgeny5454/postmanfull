@@ -11,11 +11,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
-import com.evgeny_m.data.repository.dataUpdate
-import com.evgeny_m.data.repository.updateData
-
-import com.evgeny_m.data.viewmodels.UserViewModel
 import com.evgeny_m.postman.R
+import com.evgeny_m.postman.data.repository.dataUpdate
+import com.evgeny_m.postman.data.repository.updateData
+import com.evgeny_m.postman.data.viewmodels.UserViewModel
 import com.evgeny_m.postman.databinding.FragmentSettingsBinding
 import com.evgeny_m.postman.presentation.userscreens.settings.addphotobottomsheet.PhotoBottomSheetFragment
 import com.evgeny_m.postman.presentation.userscreens.settings.utils.initBackButton

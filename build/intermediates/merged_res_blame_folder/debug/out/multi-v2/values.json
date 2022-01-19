@@ -347,23 +347,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\evgen\\.gradle\\caches\\transforms-2\\files-2.1\\1c526df6b050d2040d0cd5977cfb48dd\\lifecycle-viewmodel-2.4.0\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "49",
-                        "endOffsets": "100"
-                    },
-                    "to": {
-                        "startLines": "1561",
-                        "startColumns": "4",
-                        "startOffsets": "94700",
-                        "endColumns": "49",
-                        "endOffsets": "94745"
-                    }
-                },
-                {
                     "source": "C:\\Users\\evgen\\.gradle\\caches\\transforms-2\\files-2.1\\7f7d674ecbba893624b3e779aac17a35\\savedstate-1.1.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -378,6 +361,23 @@
                         "startOffsets": "94646",
                         "endColumns": "53",
                         "endOffsets": "94695"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\evgen\\.gradle\\caches\\transforms-2\\files-2.1\\61ca164d548e23dace39ac89e99ed4b3\\lifecycle-viewmodel-2.3.1\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "49",
+                        "endOffsets": "100"
+                    },
+                    "to": {
+                        "startLines": "1561",
+                        "startColumns": "4",
+                        "startOffsets": "94700",
+                        "endColumns": "49",
+                        "endOffsets": "94745"
                     }
                 },
                 {

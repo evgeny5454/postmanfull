@@ -1,9 +1,9 @@
 package com.evgeny_m.postman.presentation.viewModels.register
 
 import androidx.lifecycle.ViewModel
-import com.evgeny_m.domain.usecase.register.CheckUserDataUseCase
-import com.evgeny_m.domain.usecase.register.EnterCodeUseCase
-import com.evgeny_m.domain.usecase.register.EnterPhoneNumberUseCase
+import com.evgeny_m.postman.domain.domain.usecase.register.CheckUserDataUseCase
+import com.evgeny_m.postman.domain.domain.usecase.register.EnterCodeUseCase
+import com.evgeny_m.postman.domain.domain.usecase.register.EnterPhoneNumberUseCase
 
 class RegisterViewModel(
     private val checkUserDataUseCase: CheckUserDataUseCase,

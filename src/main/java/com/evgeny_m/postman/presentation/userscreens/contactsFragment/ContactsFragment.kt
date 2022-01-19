@@ -17,12 +17,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.evgeny_m.data.models.Contact
-import com.evgeny_m.data.models.ContactRoom
-import com.evgeny_m.data.models.UserData
-import com.evgeny_m.data.repository.dataContacts
-import com.evgeny_m.data.viewmodels.UserViewModel
 import com.evgeny_m.postman.R
+import com.evgeny_m.postman.data.repository.dataContacts
+import com.evgeny_m.postman.data.viewmodels.UserViewModel
 import com.evgeny_m.postman.databinding.FragmentContactsBinding
 import com.evgeny_m.postman.presentation.userscreens.settings.utils.initBackButton
 import com.evgeny_m.postman.presentation.viewModels.settings.SettingsViewModel
@@ -68,9 +65,9 @@ class ContactsFragment : Fragment() {
                 launchContactsToCoroutine()
             } else {
                 emptyList = false
-                val listToAdapter = mutableListOf<UserData>()
+                val listToAdapter = mutableListOf<com.evgeny_m.postman.data.models.UserData>()
                 list.forEach { it ->
-                    val user = UserData(
+                    val user = com.evgeny_m.postman.data.models.UserData(
                         id = it.dataBaseId,
                         name = it.name,
                         status = it.status,
@@ -119,24 +116,24 @@ class ContactsFragment : Fragment() {
         return binding.root
     }
 
-    private fun addContactToRoom(user: UserData) {
-        val listToRoom = mutableListOf<ContactRoom>()
-        val newUser = ContactRoom(
+    private fun addContactToRoom(user: com.evgeny_m.postman.data.models.UserData) {
+        val listToRoom = mutableListOf<com.evgeny_m.postman.data.models.ContactRoom>()
+        val newUser = com.evgeny_m.postman.data.models.ContactRoom(
             id = 0,
-            dataBaseId = user.id ?:"",
-            name = user.name ?:"",
-            status = user.status ?:"",
-            photo = user.photo ?:"",
+            dataBaseId = user.id ?: "",
+            name = user.name ?: "",
+            status = user.status ?: "",
+            photo = user.photo ?: "",
             bio = user.bio ?: "",
-            phone = user.phone ?:"",
-            userName = user.userName?: ""
+            phone = user.phone ?: "",
+            userName = user.userName ?: ""
         )
         listToRoom.add(newUser)
         userViewModel.addListContacts(listToRoom)
         Log.d("SizeContactsFromBD", "${listToRoom.size}")
     }
 
-    private fun launchContactsToCoroutine(){
+    private fun launchContactsToCoroutine() {
         CoroutineScope(Dispatchers.IO).launch {
             initContacts()
         }
@@ -146,7 +143,7 @@ class ContactsFragment : Fragment() {
     private fun initContacts() {
 
         if (checkPermission(READ_CONTACTS)) {
-            val arrayContacts = arrayListOf<Contact>()
+            val arrayContacts = arrayListOf<com.evgeny_m.postman.data.models.Contact>()
             val cursor = requireActivity().contentResolver.query(
                 ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
                 null,
@@ -160,7 +157,7 @@ class ContactsFragment : Fragment() {
                         it.getString(it.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME))
                     val phone =
                         it.getString(it.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER))
-                    val contact = Contact(
+                    val contact = com.evgeny_m.postman.data.models.Contact(
                         name = displayName,
                         phone = phone.replace(Regex("[\\s,()-]"), "")
                     )

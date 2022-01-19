@@ -8,9 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.evgeny_m.data.models.User
-import com.evgeny_m.data.viewmodels.UserViewModel
 import com.evgeny_m.postman.R
+import com.evgeny_m.postman.data.viewmodels.UserViewModel
 import com.evgeny_m.postman.databinding.FragmentChangeBioBinding
 import com.evgeny_m.postman.presentation.userscreens.settings.utils.hideKeyboard
 import com.evgeny_m.postman.presentation.userscreens.settings.utils.initBackButton
@@ -56,7 +55,7 @@ class ChangeUserBioFragment : Fragment() {
             when (it.itemId) {
                 R.id.save -> {
                     val userBio = binding.bio.text.toString()
-                    val user = User(
+                    val user = com.evgeny_m.postman.data.models.User(
                         userId,
                         userFirstName,
                         userLastName,

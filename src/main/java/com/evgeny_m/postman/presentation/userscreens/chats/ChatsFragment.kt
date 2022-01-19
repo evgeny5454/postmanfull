@@ -9,10 +9,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.evgeny_m.data.repository.currentUserId
-
-import com.evgeny_m.data.viewmodels.UserViewModel
 import com.evgeny_m.postman.R
+import com.evgeny_m.postman.data.repository.currentUserId
+import com.evgeny_m.postman.data.viewmodels.UserViewModel
 import com.evgeny_m.postman.databinding.FragmentChatsBinding
 import com.evgeny_m.postman.presentation.userscreens.settings.utils.initNavButton
 

@@ -3,14 +3,14 @@ package com.evgeny_m.postman.presentation.viewModels.settings
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.evgeny_m.data.repository.FirebaseRepository
-import com.evgeny_m.domain.usecase.contacts.CheckContactsUseCase
-import com.evgeny_m.domain.usecase.contacts.GetContactsFromDatabaseUseCase
-import com.evgeny_m.domain.usecase.contacts.GetUserDataByIdUseCase
-import com.evgeny_m.domain.usecase.main.EditStatusUseCase
-import com.evgeny_m.domain.usecase.settingsfragment.*
-import com.evgeny_m.domain.usecase.single_chat.GetMessagesUseCase
-import com.evgeny_m.domain.usecase.single_chat.SendMessageUseCase
+import com.evgeny_m.postman.data.repository.FirebaseRepository
+import com.evgeny_m.postman.domain.domain.usecase.contacts.CheckContactsUseCase
+import com.evgeny_m.postman.domain.domain.usecase.contacts.GetContactsFromDatabaseUseCase
+import com.evgeny_m.postman.domain.domain.usecase.contacts.GetUserDataByIdUseCase
+import com.evgeny_m.postman.domain.domain.usecase.main.EditStatusUseCase
+import com.evgeny_m.postman.domain.domain.usecase.settingsfragment.*
+import com.evgeny_m.postman.domain.domain.usecase.single_chat.GetMessagesUseCase
+import com.evgeny_m.postman.domain.domain.usecase.single_chat.SendMessageUseCase
 
 class SettingsViewModelFactory(context: Context) : ViewModelProvider.Factory {
 

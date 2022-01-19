@@ -1,25 +1,55 @@
-com/evgeny_m/postman/databinding/FragmentRegistrationBinding.java
- com.evgeny_m.postman.databinding.FragmentRegistrationBinding
 com/evgeny_m/postman/databinding/FragmentPhotoBottomSheetBinding.java
  com.evgeny_m.postman.databinding.FragmentPhotoBottomSheetBinding
 com/evgeny_m/postman/databinding/FragmentSettingsBinding.java
  com.evgeny_m.postman.databinding.FragmentSettingsBinding
-com/evgeny_m/postman/databinding/FragmentChangeUserNameBinding.java
- com.evgeny_m.postman.databinding.FragmentChangeUserNameBinding
+com/evgeny_m/postman/data/room/UserDatabase_Impl.java
+ com.evgeny_m.postman.data.room.UserDatabase_Impl
+ com.evgeny_m.postman.data.room.UserDatabase_Impl$1
 com/evgeny_m/postman/databinding/FragmentSingleChatBinding.java
  com.evgeny_m.postman.databinding.FragmentSingleChatBinding
 com/evgeny_m/postman/databinding/NavHeaderBinding.java
  com.evgeny_m.postman.databinding.NavHeaderBinding
-com/evgeny_m/postman/databinding/NavContentBinding.java
- com.evgeny_m.postman.databinding.NavContentBinding
 com/evgeny_m/postman/databinding/ItemUserChatBinding.java
  com.evgeny_m.postman.databinding.ItemUserChatBinding
 com/evgeny_m/postman/databinding/FragmentChangeBioBinding.java
  com.evgeny_m.postman.databinding.FragmentChangeBioBinding
+com/evgeny_m/postman/data/room/ContactsDao_Impl.java
+ com.evgeny_m.postman.data.room.ContactsDao_Impl
+ com.evgeny_m.postman.data.room.ContactsDao_Impl$1
+ com.evgeny_m.postman.data.room.ContactsDao_Impl$2
+ com.evgeny_m.postman.data.room.ContactsDao_Impl$3
+ com.evgeny_m.postman.data.room.ContactsDao_Impl$4
+ com.evgeny_m.postman.data.room.ContactsDao_Impl$5
 com/evgeny_m/postman/databinding/FragmentChatsBinding.java
  com.evgeny_m.postman.databinding.FragmentChatsBinding
 com/evgeny_m/postman/databinding/FragmentPhotoEditorBinding.java
  com.evgeny_m.postman.databinding.FragmentPhotoEditorBinding
+com/evgeny_m/postman/databinding/FragmentContactsBinding.java
+ com.evgeny_m.postman.databinding.FragmentContactsBinding
+com/evgeny_m/postman/data/room/ContactsDatabase_Impl.java
+ com.evgeny_m.postman.data.room.ContactsDatabase_Impl
+ com.evgeny_m.postman.data.room.ContactsDatabase_Impl$1
+com/evgeny_m/postman/databinding/ItemMessageBinding.java
+ com.evgeny_m.postman.databinding.ItemMessageBinding
+com/evgeny_m/postman/databinding/FragmentNavigationBinding.java
+ com.evgeny_m.postman.databinding.FragmentNavigationBinding
+com/evgeny_m/postman/databinding/BottomSheetBinding.java
+ com.evgeny_m.postman.databinding.BottomSheetBinding
+com/evgeny_m/postman/data/room/UserDao_Impl.java
+ com.evgeny_m.postman.data.room.UserDao_Impl
+ com.evgeny_m.postman.data.room.UserDao_Impl$1
+ com.evgeny_m.postman.data.room.UserDao_Impl$2
+ com.evgeny_m.postman.data.room.UserDao_Impl$3
+ com.evgeny_m.postman.data.room.UserDao_Impl$4
+ com.evgeny_m.postman.data.room.UserDao_Impl$5
+ com.evgeny_m.postman.data.room.UserDao_Impl$6
+ com.evgeny_m.postman.data.room.UserDao_Impl$7
+com/evgeny_m/postman/databinding/FragmentRegistrationBinding.java
+ com.evgeny_m.postman.databinding.FragmentRegistrationBinding
+com/evgeny_m/postman/databinding/FragmentChangeUserNameBinding.java
+ com.evgeny_m.postman.databinding.FragmentChangeUserNameBinding
+com/evgeny_m/postman/databinding/NavContentBinding.java
+ com.evgeny_m.postman.databinding.NavContentBinding
 com/evgeny_m/postman/databinding/ActivityMainBinding.java
  com.evgeny_m.postman.databinding.ActivityMainBinding
 com/evgeny_m/postman/databinding/FragmentChangeUserFullNameBinding.java
@@ -30,17 +60,9 @@ com/evgeny_m/postman/BuildConfig.java
  com.evgeny_m.postman.BuildConfig
 com/evgeny_m/postman/databinding/FragmentSplashBinding.java
  com.evgeny_m.postman.databinding.FragmentSplashBinding
-com/evgeny_m/postman/databinding/FragmentContactsBinding.java
- com.evgeny_m.postman.databinding.FragmentContactsBinding
-com/evgeny_m/postman/databinding/ItemMessageBinding.java
- com.evgeny_m.postman.databinding.ItemMessageBinding
 com/evgeny_m/postman/databinding/AccountSettingsBinding.java
  com.evgeny_m.postman.databinding.AccountSettingsBinding
 com/evgeny_m/postman/databinding/FragmentContactDetailsBinding.java
  com.evgeny_m.postman.databinding.FragmentContactDetailsBinding
-com/evgeny_m/postman/databinding/FragmentNavigationBinding.java
- com.evgeny_m.postman.databinding.FragmentNavigationBinding
-com/evgeny_m/postman/databinding/BottomSheetBinding.java
- com.evgeny_m.postman.databinding.BottomSheetBinding
 com/evgeny_m/postman/databinding/ItemContactBinding.java
  com.evgeny_m.postman.databinding.ItemContactBinding
